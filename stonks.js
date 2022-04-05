@@ -6,9 +6,9 @@ class Trading extends Engine.Scene {
         this.price = 0;
 
         this.engine.setTitle("Trade Stonks");
-
         this.engine.addAction("buy");
         this.engine.addAction("sell");
+        this.engine.addAction("thing");
     }
 
 
@@ -36,6 +36,10 @@ class Trading extends Engine.Scene {
         if(this.cash > 2000) {
             this.engine.show('Cash > $2k, noice!');
             this.engine.gotoScene(Victory);
+        }
+        if(action=="thing")
+        {
+            this.cash += 500;
         }
     }
 }
